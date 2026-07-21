@@ -179,6 +179,12 @@ ruff check .
 
 The example creates `examples/minimal-mission/dist/index.html` and `build-manifest.json`. The source Markdown remains unchanged.
 
+Sprint 2 adds source-link validation, Git-aware provenance (with a non-Git fallback), and a read-only [Mission Solar Eclipse profile](profiles/mission-solar-eclipse.yml). Use it against a local mission clone without adding a `publication.yml` to that repository:
+
+```bash
+docgen build /path/to/mission-solar-eclipse --profile profiles/mission-solar-eclipse.yml
+```
+
 Read [Getting started](docs/getting-started.md) for the project format and [architecture documentation](docs/architecture/system-context.md) for boundaries and decisions.
 
 ## License

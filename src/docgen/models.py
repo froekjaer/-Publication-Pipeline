@@ -10,6 +10,7 @@ class ProjectConfig:
     language: str
     publication_type: str
     content: tuple[Path, ...]
+    metadata_overrides: dict[Path, dict]
     html: bool
     pdf: bool
 

@@ -13,9 +13,12 @@ def main(argv: list[str] | None = None) -> int:
     build_parser.add_argument(
         "project", type=Path, help="Path to a project containing publication.yml"
     )
+    build_parser.add_argument(
+        "--profile", type=Path, help="Use a read-only publication profile outside the project root."
+    )
     args = parser.parse_args(argv)
     try:
-        result = build(args.project)
+        result = build(args.project, args.profile)
     except DocgenError as error:
         print(f"docgen: error: {error}", file=sys.stderr)
         return 2

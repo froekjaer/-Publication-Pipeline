@@ -1,0 +1,21 @@
+# Read-only adapter for the current Mission Solar Eclipse repository.
+# Run: docgen build /path/to/mission-solar-eclipse --profile profiles/mission-solar-eclipse.yml
+project:
+  id: mission-solar-eclipse-charter
+  title: Mission Solar Eclipse — Mission Charter
+  version: 0.1.0
+  language: en
+  type: mission-handbook
+content:
+  - path: MISSION.md
+    metadata:
+      id: mission-charter
+      title: Mission Charter
+      order: 10
+      status: initial-reference-mission-baseline
+      version: 0.1.0
+      audience: mission-team
+      language: en
+outputs:
+  html: true
+  pdf: false
