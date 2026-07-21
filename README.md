@@ -1,6 +1,6 @@
 # Publication Pipeline
 
-**Foundation Release v1.0**
+**Foundation Release v1.0 · Documentation Generator Foundation Sprint**
 
 Publication Pipeline defines a reproducible, reviewable method for transforming canonical Markdown source material into books, articles, PDF documents, GitHub Pages and presentations.
 
@@ -162,7 +162,24 @@ A production correction should not conceal a semantic source defect. A semantic 
 
 Foundation v1.0 defines the publication architecture and cross-repository responsibilities. It does not yet prescribe one toolchain or provide complete build automation.
 
-The next implementation step is a small end-to-end publication profile using reviewed Mission Framework or Mission Solar Eclipse Markdown and producing at least GitHub Pages and PDF with recorded source commit SHAs.
+The repository now includes a small, tested implementation named Documentation Generator. It builds a local Markdown publication project into sanitised HTML and a provenance manifest. PDF remains deliberately optional until a controlled, reproducible renderer is selected.
+
+## Quick start
+
+Requires Python 3.11 or newer.
+
+```bash
+python -m venv .venv
+. .venv/bin/activate
+pip install -e '.[dev]'
+docgen build examples/minimal-mission
+pytest
+ruff check .
+```
+
+The example creates `examples/minimal-mission/dist/index.html` and `build-manifest.json`. The source Markdown remains unchanged.
+
+Read [Getting started](docs/getting-started.md) for the project format and [architecture documentation](docs/architecture/system-context.md) for boundaries and decisions.
 
 ## License
 
