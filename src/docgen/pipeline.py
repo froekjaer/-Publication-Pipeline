@@ -7,6 +7,7 @@ from .discovery import discover_documents
 from .errors import DocgenError
 from .manifest import write_manifest
 from .models import BuildResult
+from .validation import validate_links
 
 
 def _copy_assets(project_root: Path, output_dir: Path, documents: list) -> None:
@@ -17,12 +18,15 @@ def _copy_assets(project_root: Path, output_dir: Path, documents: list) -> None:
             shutil.copytree(source_assets, target_assets, dirs_exist_ok=True)
 
 
-def build(project_root: Path) -> BuildResult:
+def build(project_root: Path, profile_path: Path | None = None) -> BuildResult:
     project_root = project_root.resolve()
     if not project_root.is_dir():
         raise DocgenError(f"Project directory does not exist: {project_root}")
-    config = load_config(project_root)
-    documents, warnings = discover_documents(project_root, config.content)
+    config = load_config(project_root, profile_path)
+    documents, warnings = discover_documents(
+        project_root, config.content, config.metadata_overrides
+    )
+    warnings.extend(validate_links(project_root, documents))
     output_dir = project_root / "dist"
     output_dir.mkdir(exist_ok=True)
     _copy_assets(project_root, output_dir, documents)

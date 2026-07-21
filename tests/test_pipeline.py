@@ -9,6 +9,7 @@ from docgen.errors import DocgenError
 from docgen.pipeline import build
 
 EXAMPLE = Path(__file__).parents[1] / "examples" / "minimal-mission"
+PROFILE = Path(__file__).parents[1] / "profiles" / "mission-solar-eclipse.yml"
 
 
 def copy_example(tmp_path: Path) -> Path:
@@ -101,6 +102,29 @@ def test_raw_script_is_not_emitted(tmp_path: Path) -> None:
     result = build(project)
     assert result.html_path
     assert "<script>" not in result.html_path.read_text(encoding="utf-8")
+
+
+def test_missing_anchor_fails(tmp_path: Path) -> None:
+    project = copy_example(tmp_path)
+    path = project / "docs" / "introduction.md"
+    path.write_text(path.read_text(encoding="utf-8").replace("#objectives", "#missing"))
+    with pytest.raises(DocgenError, match="Anchor not found"):
+        build(project)
+
+
+def test_profile_adds_metadata_without_changing_mission_source(tmp_path: Path) -> None:
+    mission = tmp_path / "mission-solar-eclipse"
+    mission.mkdir()
+    source = mission / "MISSION.md"
+    source.write_text(
+        "# Mission Charter\n\nMission source remains authoritative.\n", encoding="utf-8"
+    )
+    result = build(mission, PROFILE)
+    assert result.html_path and "Mission Charter" in result.html_path.read_text(encoding="utf-8")
+    assert (
+        source.read_text(encoding="utf-8")
+        == "# Mission Charter\n\nMission source remains authoritative.\n"
+    )
 
 
 def test_pdf_is_explicitly_unavailable(tmp_path: Path) -> None:

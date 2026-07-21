@@ -19,14 +19,20 @@ def _inside(root: Path, candidate: Path) -> bool:
     return True
 
 
-def _parse_frontmatter(path: Path, text: str) -> tuple[dict, str]:
+def _parse_frontmatter(path: Path, text: str, override: dict | None = None) -> tuple[dict, str]:
     match = FRONTMATTER.match(text)
     if not match:
-        raise DocgenError(f"Missing YAML frontmatter in {path}.")
-    try:
-        metadata = yaml.safe_load(match.group(1))
-    except yaml.YAMLError as error:
-        raise DocgenError(f"Invalid frontmatter in {path}: {error}") from error
+        if not override:
+            raise DocgenError(f"Missing YAML frontmatter in {path}.")
+        metadata, body = override, text
+    else:
+        try:
+            metadata = yaml.safe_load(match.group(1))
+        except yaml.YAMLError as error:
+            raise DocgenError(f"Invalid frontmatter in {path}: {error}") from error
+        if override:
+            metadata = {**metadata, **override}
+        body = text[match.end() :]
     if not isinstance(metadata, dict):
         raise DocgenError(f"Frontmatter in {path} must be a mapping.")
     missing = [key for key in REQUIRED_METADATA if key not in metadata]
@@ -37,7 +43,7 @@ def _parse_frontmatter(path: Path, text: str) -> tuple[dict, str]:
     for key in REQUIRED_METADATA:
         if key != "order" and (not isinstance(metadata[key], str) or not metadata[key].strip()):
             raise DocgenError(f"Metadata {key} in {path} must be a non-empty string.")
-    return metadata, text[match.end() :]
+    return metadata, body
 
 
 def _validate_images(project_root: Path, path: Path, body: str) -> None:
@@ -52,7 +58,7 @@ def _validate_images(project_root: Path, path: Path, body: str) -> None:
 
 
 def discover_documents(
-    project_root: Path, content_paths: tuple[Path, ...]
+    project_root: Path, content_paths: tuple[Path, ...], metadata_overrides: dict[Path, dict]
 ) -> tuple[list[SourceDocument], list[str]]:
     documents: list[SourceDocument] = []
     warnings: list[str] = []
@@ -63,7 +69,9 @@ def discover_documents(
             raise DocgenError(f"Source file is not Markdown: {relative_path}")
         if not path.is_file():
             raise DocgenError(f"Source file not found: {relative_path}")
-        metadata, body = _parse_frontmatter(relative_path, path.read_text(encoding="utf-8"))
+        metadata, body = _parse_frontmatter(
+            relative_path, path.read_text(encoding="utf-8"), metadata_overrides.get(relative_path)
+        )
         _validate_images(project_root, relative_path, body)
         document_id = metadata["id"]
         if document_id in ids:
