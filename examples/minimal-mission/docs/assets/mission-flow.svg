@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="120" viewBox="0 0 640 120" role="img" aria-label="Mission publication flow">
+  <rect width="640" height="120" fill="#f4f7fb"/>
+  <text x="320" y="52" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#243b53">Reviewed Markdown → HTML publication</text>
+  <text x="320" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#486581">Source remains authoritative</text>
+</svg>

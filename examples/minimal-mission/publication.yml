@@ -1,0 +1,13 @@
+project:
+  id: minimal-mission
+  title: Minimal Mission Handbook
+  version: 0.1.0
+  language: en
+  type: mission-handbook
+content:
+  - docs/introduction.md
+  - docs/objectives.md
+  - docs/risks.md
+outputs:
+  html: true
+  pdf: false
