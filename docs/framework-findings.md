@@ -67,3 +67,37 @@ Architecture; Evidence Model; Trust.
 ### Resolution status
 
 Open.
+
+## FF-PUB-003 — Publication metadata may need an external adapter
+
+```yaml
+id: FF-PUB-003
+title: Publication metadata may need an external adapter
+status: proposed
+observed_in: publication-pipeline
+date: 2026-07-21
+```
+
+### Observation
+
+Mission Solar Eclipse has authoritative mission Markdown but does not yet contain publication frontmatter or a generator configuration. Requiring the mission to adopt generator-specific metadata would reverse the intended dependency: the generator should adapt to the mission.
+
+### Evidence
+
+Sprint 2 builds the current `MISSION.md` through a read-only profile that supplies only publication metadata. The source file remains byte-for-byte unchanged.
+
+### Impact
+
+Cross-repository publication can otherwise create unnecessary pressure to embed tool-specific structure in canonical mission content.
+
+### Recommendation
+
+Define when a reusable, external publication adapter is preferable to source-local metadata, including how the adapter's provenance and review status should be recorded.
+
+### Framework area
+
+Architecture; Versioning; Source authority.
+
+### Resolution status
+
+Open.
