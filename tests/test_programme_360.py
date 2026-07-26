@@ -50,7 +50,7 @@ ownership:
 
 
 def test_build_generates_catalogue_and_provenance(tmp_path: Path) -> None:
-    write(tmp_path / "a.yml", manifest("example/a", ["alpha"]));
+    write(tmp_path / "a.yml", manifest("example/a", ["alpha"]))
     write(tmp_path / "b.yml", manifest("example/b", ["beta"], dependency="example/a"))
     write(
         tmp_path / "sources.yml",
@@ -69,7 +69,7 @@ def test_build_generates_catalogue_and_provenance(tmp_path: Path) -> None:
 
 
 def test_duplicate_ownership_is_reported(tmp_path: Path) -> None:
-    write(tmp_path / "a.yml", manifest("example/a", ["shared"]));
+    write(tmp_path / "a.yml", manifest("example/a", ["shared"]))
     write(tmp_path / "b.yml", manifest("example/b", ["shared"]))
     write(
         tmp_path / "sources.yml",
