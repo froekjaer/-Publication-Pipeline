@@ -1,0 +1,51 @@
+id: executive-business
+name: Executive Business Summary
+audience:
+  primary:
+    - business leaders
+    - board members
+    - partners
+    - sponsors
+    - transformation leaders
+  assumed_technical_depth: low
+purpose: >-
+  Explain the Collaborative Intelligence programme as a practical business and
+  governance initiative, including the problem addressed, programme structure,
+  evidence strategy, current maturity, value potential and next milestones.
+length:
+  target_pages: 2
+  target_words: 900
+emphasis:
+  - business problem
+  - decision quality
+  - accountable use of AI
+  - traceability and governance
+  - reusable platform capability
+  - greenfield and brownfield validation
+  - current maturity and next milestones
+de_emphasis:
+  - implementation detail
+  - internal file structure
+  - exhaustive terminology
+  - speculative commercial claims
+required_sections:
+  - executive proposition
+  - business problem
+  - programme response
+  - how the repositories work together
+  - validation strategy
+  - current position
+  - business relevance
+  - next milestones
+  - maturity statement
+claims_policy:
+  require_manifest_support: true
+  distinguish_observed_from_declared: true
+  prohibit_unvalidated_roi_claims: true
+  prohibit_claim_of_established_discipline: true
+publication:
+  formats:
+    - markdown
+    - html
+    - pdf
+  provenance: required
