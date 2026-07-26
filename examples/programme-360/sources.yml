@@ -4,3 +4,5 @@ sources:
   - manifest: manifests/collaborative-intelligence.yml
   - manifest: manifests/mission-framework.yml
   - manifest: manifests/mission-solar-eclipse.yml
+  - manifest: manifests/publication-pipeline.yml
+  - manifest: manifests/timelapse-pro.yml
