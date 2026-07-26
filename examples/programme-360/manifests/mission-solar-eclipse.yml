@@ -1,0 +1,33 @@
+schema_version: 1
+programme:
+  id: collaborative-intelligence
+  name: Collaborative Intelligence
+repository:
+  full_name: froekjaer/mission-solar-eclipse
+  role: reference-mission
+  lifecycle: foundation
+  status: active
+  version: "1.0"
+purpose:
+  summary: Greenfield reference mission and empirical challenge.
+ownership:
+  owns:
+    - solar-eclipse-domain-evidence
+    - solar-eclipse-operational-decisions
+dependencies:
+  consumes_from:
+    - repository: froekjaer/mission-framework
+      capability: canonical-semantics
+  provides_to:
+    - repository: froekjaer/mission-framework
+      capability: framework-findings
+reference:
+  type: greenfield
+  purpose: Test creation of a bounded mission without legacy constraints.
+current:
+  baseline: Foundation Release v1.0
+  initiative: First traceable vertical slice
+publication:
+  include:
+    - README.md
+  authority: mission
