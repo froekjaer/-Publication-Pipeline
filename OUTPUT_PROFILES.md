@@ -1,6 +1,6 @@
 # Publication Output Profiles
 
-**Status:** Foundation Release v1.0
+**Status:** Foundation Release v1.1 — aligned with Mission Framework Foundation 0.2
 
 ## Purpose
 
@@ -23,6 +23,8 @@ Every output must record:
 
 A profile may change presentation and emphasis. It may not silently change normative meaning or present generated synthesis as original source text.
 
+For Mission Framework Foundation 0.2 material, compression must preserve Trust as the primary architectural quality and must not erase material Availability, Reliability, Safety, local-autonomy, edge-authority or evidence constraints.
+
 ## Output matrix
 
 | Output | Primary purpose | Typical transformation | Required checks |
@@ -31,98 +33,49 @@ A profile may change presentation and emphasis. It may not silently change norma
 | Article | Bounded argument for a publication context | select, compress, reframe for audience | claim fidelity, citations, declared new synthesis |
 | GitHub Pages | Navigable web publication | generate navigation, landing pages and web links | broken links, source links, accessibility |
 | PDF | Stable distribution or archival representation | paginate and style an approved profile | pagination, figures, fonts, metadata, source revision |
-| Slides | Presentation-led interpretation | compress, sequence and visualise | omission risk, speaker context, figure provenance |
-| Executive summary | Decision-oriented overview | extract purpose, findings, implications, risks and actions | no unsupported certainty, traceability to sections and claims |
+| Slides | Presentation-led interpretation | compress, sequence and visualise | omission risk, speaker context, figure provenance, architecture-semantic fidelity |
+| Executive summary | Decision-oriented overview | extract purpose, findings, implications, risks and actions | no unsupported certainty, traceability to sections and claims, mission-consequence fidelity |
 
 ## Book profile
 
-A book profile should define:
-
-- title and edition
-- chapter order
-- included appendices
-- citation and bibliography policy
-- figure and table handling
-- front matter, glossary and index policy
-- PDF, print or e-book targets
-
-Book-specific transitions and explanatory text are editorial additions and should be identifiable as such.
+A book profile should define title and edition, chapter order, included appendices, citation/bibliography policy, figure/table handling, front matter/glossary/index policy, and PDF/print/e-book targets. Book-specific transitions and explanatory text are editorial additions and should be identifiable as such.
 
 ## Article profile
 
-An article profile should define:
-
-- target venue or audience
-- central proposition
-- word or length constraint
-- selected source sections
-- citation style
-- treatment of limitations and competing interpretations
-- whether any new analysis is introduced
-
-The article must identify the source baseline and must not imply that omitted qualifications do not exist.
+An article profile should define target venue/audience, central proposition, length constraint, selected source sections, citation style, treatment of limitations/competing interpretations, and whether new analysis is introduced. The article must identify the source baseline and must not imply that omitted qualifications do not exist.
 
 ## GitHub Pages profile
 
-A GitHub Pages profile should define:
-
-- site entry point
-- navigation hierarchy
-- source-to-page mapping
-- URL and redirect policy
-- treatment of generated indexes and summaries
-- links back to canonical repository files and revisions
-
-The web site is a publication surface, not the canonical semantic repository.
+A GitHub Pages profile should define site entry point, navigation hierarchy, source-to-page mapping, URL/redirect policy, treatment of generated indexes/summaries, and links back to canonical repository files and revisions. The web site is a publication surface, not the canonical semantic repository.
 
 ## PDF profile
 
-PDF may be generated from a book, article, executive-summary or other approved profile. The PDF profile should define:
-
-- page size and layout
-- typography and figure policy
-- headers, footers and document metadata
-- accessibility requirements
-- version and provenance statement
-- output validation
-
-Corrections to claims or definitions must return to the maintained Markdown source. A PDF-only semantic correction creates an unacceptable fork.
+PDF may be generated from a book, article, executive-summary or other approved profile. The PDF profile should define page size/layout, typography/figure policy, headers/footers/metadata, accessibility requirements, version/provenance statement and output validation. Corrections to claims or definitions must return to maintained Markdown source.
 
 ## Slides profile
 
 A slides profile should define:
 
-- audience, setting and expected duration
-- narrative sequence
-- selected claims and evidence
-- diagrams or generated visuals
-- speaker-note requirements
-- source references for material assertions
-- known omissions caused by compression
+- audience, setting and expected duration;
+- narrative sequence;
+- selected claims and evidence;
+- diagrams or generated visuals;
+- speaker-note requirements;
+- source references for material assertions;
+- known omissions caused by compression;
+- semantic relationships that diagrams must preserve.
+
+For Foundation 0.2 architecture, slides and diagrams must not accidentally turn Action Requests into direct remote commands or depict the headend as having a transparent control path to internal devices. Where relevant they should preserve the edge as Policy Enforcement Point and Execution Authority, local mission continuity, and the role of Availability/Reliability in Trust.
 
 Slides should not be treated as self-sufficient evidence merely because they are visually persuasive.
 
 ## Executive summary profile
 
-An executive summary is an explicit first-class output, not merely the opening paragraphs of another publication.
+An executive summary is an explicit first-class output, not merely the opening paragraphs of another publication. It should normally contain purpose/scope, status/decision context, principal findings, material evidence/confidence, unresolved uncertainty/limitations, implications/risks/opportunities, recommended actions/decisions, links to supporting source sections, and source revision/provenance.
 
-It should normally contain:
-
-1. purpose and scope
-2. current status or decision context
-3. principal findings
-4. material evidence and confidence
-5. unresolved uncertainty and limitations
-6. implications, risks and opportunities
-7. recommended actions or decisions
-8. links to supporting source sections
-9. source revision and publication provenance
-
-The profile must prevent compression from turning qualified findings into categorical claims. Material disagreement and uncertainty must remain visible when they affect decisions.
+For critical-infrastructure material, mission consequence must survive compression. A valid security control must not be presented as automatically trustworthy if it can unnecessarily damage Availability, Reliability or Safety.
 
 ## One source to multiple outputs
-
-A conforming pipeline should support the following model:
 
 ```text
 Reviewed Markdown source set
@@ -141,15 +94,20 @@ Shared passages should be referenced or transformed from the maintained source r
 
 Before release, each output should be checked for:
 
-- traceability to source commits
-- broken references and missing assets
-- fidelity of claims and definitions
-- visible treatment of uncertainty
-- accessibility appropriate to the format
-- declared editorial or AI-assisted transformations
-- absence of accidental confidential or restricted content
-- reproducibility from the recorded manifest and tooling
+- traceability to source commits;
+- broken references and missing assets;
+- fidelity of claims, definitions and material architecture relationships;
+- visible treatment of uncertainty and evidence boundaries;
+- accessibility appropriate to the format;
+- declared editorial or AI-assisted transformations;
+- absence of accidental confidential or restricted content;
+- reproducibility from the recorded manifest and tooling;
+- for Foundation 0.2: preservation of Trust, Availability/Reliability, local autonomy, edge execution authority and controlled Action Request semantics when material to the selected source.
+
+## Foundation 0.2 guidance
+
+See [Mission Framework Foundation 0.2 — Publication Guidance](docs/framework-foundation-0.2-publication-guidance.md).
 
 ## Implementation status
 
-These profiles define the required conceptual behaviour. The repository does not yet contain a complete executable toolchain. The first implementation should use one small Mission Framework or Mission Solar Eclipse source set to generate at least GitHub Pages, PDF and an executive summary from a common manifest.
+These profiles define required conceptual behaviour. The executable Documentation Generator currently implements a smaller HTML/provenance subset. Future builders for slides, PDF and executive summaries should enforce these profile requirements rather than treating them as visual-only transformations.
