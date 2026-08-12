@@ -1,10 +1,10 @@
 # Publication Pipeline
 
-**Foundation Release v1.0 · Documentation Generator Foundation Sprint**
+**Foundation Release v1.1 · Mission Framework Foundation 0.2 alignment**
 
 Publication Pipeline defines a reproducible, reviewable method for transforming canonical Markdown source material into books, articles, PDF documents, GitHub Pages and presentations.
 
-It is part of the [Collaborative Intelligence](https://github.com/froekjaer/collaborative-intelligence) research programme and supports publication from [Mission Framework](https://github.com/froekjaer/mission-framework), [Mission Solar Eclipse](https://github.com/froekjaer/mission-solar-eclipse) and future programme repositories.
+It is part of the [Collaborative Intelligence](https://github.com/froekjaer/collaborative-intelligence) research programme and supports publication from [Mission Framework](https://github.com/froekjaer/mission-framework), [Mission Platform](https://github.com/froekjaer/Mission-Platform), [Mission Solar Eclipse](https://github.com/froekjaer/mission-solar-eclipse) and future programme repositories.
 
 The current GitHub repository slug is `froekjaer/-Publication-Pipeline`; the project name is **Publication Pipeline**.
 
@@ -28,41 +28,35 @@ Book · Article · PDF · GitHub Pages · Presentation
 
 The pipeline must make transformations explicit enough that a reader can determine which source material produced a publication and which editorial choices altered its presentation.
 
+## Foundation 0.2 alignment
+
+Publication Pipeline v1.1 adds explicit guidance for publishing Mission Framework / Mission Platform Foundation 0.2 without weakening its architecture through editorial compression.
+
+In particular, derived outputs must preserve material distinctions around:
+
+- **Trust** as the primary architectural quality;
+- **Availability and Reliability** as first-class critical-infrastructure concerns;
+- **local mission continuity** when external dependencies fail;
+- the edge as **Policy Enforcement Point and Execution Authority**;
+- signed **Action Requests** rather than transparent remote commands;
+- controlled two-way semantics across the edge boundary;
+- modular **Device Adapters** for PLCs, cameras, PCs and other device families;
+- the unified trusted-update pattern for edge and downstream devices;
+- the distinction between cryptographically valid and safe-to-execute-now;
+- explicit evidence/maturity limits for examples such as the REVIEW-001 waterworks simulation.
+
+See [Foundation 0.2 Publication Guidance](docs/framework-foundation-0.2-publication-guidance.md) and [Output Profiles](OUTPUT_PROFILES.md).
+
 ## Relationship to the programme
 
-### [Collaborative Intelligence](https://github.com/froekjaer/collaborative-intelligence)
-
+### Collaborative Intelligence
 Provides the research vision, programme architecture and shared principles.
 
-### [Mission Framework](https://github.com/froekjaer/mission-framework)
+### Mission Framework / Mission Platform
+Provide canonical semantic and architectural source material. Publication may reorganise or explain framework content, but must not silently change normative meaning. Publication Pipeline is not semantic authority.
 
-Provides canonical semantic source material. Publication may reorganise or explain framework content, but must not silently change normative meaning.
-
-### [Mission Solar Eclipse](https://github.com/froekjaer/mission-solar-eclipse)
-
+### Mission Solar Eclipse
 Provides the first reference mission and practical source material for books, articles, operational documents, public pages and presentations.
-
-## Publication targets
-
-### Book
-
-A book assembles a sustained argument or body of knowledge from multiple reviewed source files. It may include front matter, chapters, appendices, references, figures and indexes.
-
-### Article
-
-An article selects and reframes a bounded proposition for a defined audience and publication context. The article should identify its source revision and distinguish synthesis from new claims.
-
-### PDF
-
-PDF is a stable distribution and archival format generated from an approved source set. Page layout is a presentation concern; semantic corrections should return to the Markdown source rather than being made only in the generated PDF.
-
-### GitHub Pages
-
-GitHub Pages provides navigable web publication directly related to repository content. Web navigation, summaries and landing pages may be generated or curated, but should preserve links to canonical sources.
-
-### Presentations
-
-Presentations are audience-specific interpretations of reviewed source material. They necessarily compress and sequence content. Material omissions, simplifications and newly created diagrams should therefore be reviewable and traceable.
 
 ## Architectural principles
 
@@ -76,93 +70,36 @@ Presentations are audience-specific interpretations of reviewed source material.
 8. **Accessible outputs** — publication formats should support their intended audiences and reasonable accessibility requirements.
 9. **Replaceable tooling** — the architecture should not depend conceptually on a single renderer or vendor.
 10. **No silent semantic authority** — a generated publication does not supersede its canonical source.
+11. **Architecture-semantic fidelity** — diagrams and compressed outputs must preserve material boundaries, directions, authorities and failure semantics.
+12. **Mission-consequence fidelity** — Trust must not be reduced to security when Availability, Reliability, Safety or local autonomy are material to the source claim.
 
 ## Logical pipeline
 
 ```text
 1. Discover
-   Identify source repositories, revisions and candidate files.
-
 2. Select
-   Define the publication manifest and intended audience.
-
 3. Validate source
-   Check links, metadata, structure and required provenance.
-
 4. Assemble
-   Order source units and apply explicit inclusion rules.
-
 5. Transform
-   Resolve cross-references, figures, citations and format-specific structures.
-
 6. Render
-   Produce one or more target formats.
-
 7. Validate output
-   Check completeness, readability, accessibility and broken references.
-
 8. Record provenance
-   Store source revisions, configuration, tool versions and build identity.
-
 9. Release
-   Publish immutable or versioned artefacts with a changelog.
 ```
-
-## Source and generated content
-
-A recommended repository-neutral convention is:
-
-```text
-publication/
-├── manifest.yml
-├── metadata.yml
-├── source-map.yml
-└── profiles/
-    ├── book.yml
-    ├── article.yml
-    ├── pages.yml
-    └── presentation.yml
-
-dist/
-├── book/
-├── articles/
-├── pdf/
-├── pages/
-└── presentations/
-```
-
-This is an initial convention, not a mandatory implementation. Practical use should determine the final schemas and tools.
-
-## Publication manifest
-
-A publication manifest should eventually record at least:
-
-- publication identifier and version
-- title, language and audience
-- source repositories and commit SHAs
-- ordered source files or selection rules
-- publication profile and target formats
-- editorial transformations
-- citation and figure policies
-- build tooling and versions
-- output checks
-- release date and responsible approver
 
 ## Review model
 
 The pipeline distinguishes three review layers:
 
-- **semantic review** — whether the source claims and definitions are justified
-- **editorial review** — whether selection, structure and explanation serve the intended audience
-- **production review** — whether generated outputs are complete, readable and technically correct
+- **semantic review** — whether source claims and definitions are justified;
+- **editorial review** — whether selection, structure and explanation serve the intended audience without changing material meaning;
+- **production review** — whether generated outputs are complete, readable and technically correct.
 
-A production correction should not conceal a semantic source defect. A semantic correction should be made in the owning source repository and then propagated through a new publication build.
+For architecture-heavy material, editorial and production review also verify that diagrams have not changed trust boundaries, execution authority, communication semantics or evidence limitations.
 
-## Foundation scope
+## Implementation status
 
-Foundation v1.0 defines the publication architecture and cross-repository responsibilities. It does not yet prescribe one toolchain or provide complete build automation.
-
-The repository now includes a small, tested implementation named Documentation Generator. It builds a local Markdown publication project into sanitised HTML and a provenance manifest. PDF remains deliberately optional until a controlled, reproducible renderer is selected.
+Foundation v1.1 retains the tested Documentation Generator implementation from v1.0 and extends the publication contract/guidance for Foundation 0.2. The executable generator currently builds a local Markdown publication project into sanitised HTML and a provenance manifest. PDF, slides and richer executive-summary builders remain future implementation work and must conform to the output profiles when added.
 
 ## Quick start
 
@@ -177,9 +114,7 @@ pytest
 ruff check .
 ```
 
-The example creates `examples/minimal-mission/dist/index.html` and `build-manifest.json`. The source Markdown remains unchanged.
-
-Read [Getting started](docs/getting-started.md) for the project format and [architecture documentation](docs/architecture/system-context.md) for boundaries and decisions.
+Read [Getting started](docs/getting-started.md), [system context](docs/architecture/system-context.md), [Output Profiles](OUTPUT_PROFILES.md), and [Foundation 0.2 Publication Guidance](docs/framework-foundation-0.2-publication-guidance.md).
 
 ## License
 
