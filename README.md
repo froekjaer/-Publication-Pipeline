@@ -101,6 +101,8 @@ For architecture-heavy material, editorial and production review also verify tha
 
 Foundation v1.1 retains the tested Documentation Generator implementation from v1.0 and extends the publication contract/guidance for Foundation 0.2. The executable generator currently builds a local Markdown publication project into sanitised HTML and a provenance manifest. PDF, slides and richer executive-summary builders remain future implementation work and must conform to the output profiles when added.
 
+**Actual adoption, verified 2026-09-16:** the sentence above describing Mission Framework, Mission Platform and Mission Solar Eclipse "supports publication from" this tool describes the intended programme architecture, not current wiring. As of this date, none of the three repositories' live published sites are actually built by this tool's Documentation Generator - Mission Framework's site is built by its own bespoke pandoc/weasyprint workflow, and Mission Platform's and Collaborative Intelligence's sites are built by plain static-file `actions/checkout` + `upload-pages-artifact` workflows with no transformation step at all. This is not a defect in this tool - the generator itself works as described above - but a reader should not assume current integration from the "supports publication from" sentence alone. Wiring an actual consumer to this tool is future work, not attempted here.
+
 ## Quick start
 
 Requires Python 3.11 or newer.
