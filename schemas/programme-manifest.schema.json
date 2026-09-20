@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/froekjaer/-Publication-Pipeline/schemas/programme-manifest.schema.json",
+  "title": "Collaborative Intelligence programme manifest",
+  "type": "object",
+  "required": ["schema_version", "programme", "repository", "purpose", "ownership", "current"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "programme": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "repository": {
+      "type": "object",
+      "required": ["full_name", "role", "lifecycle", "status", "version"],
+      "properties": {
+        "full_name": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+        "role": {"type": "string", "minLength": 1},
+        "lifecycle": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "minLength": 1},
+        "version": {"type": ["string", "number"]},
+        "default_branch": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "purpose": {
+      "type": "object",
+      "required": ["summary"],
+      "properties": {
+        "summary": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "ownership": {
+      "type": "object",
+      "required": ["owns"],
+      "properties": {
+        "owns": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "does_not_own": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      },
+      "additionalProperties": true
+    },
+    "dependencies": {
+      "type": "object",
+      "properties": {
+        "provides_to": {"$ref": "#/$defs/dependencyList"},
+        "consumes_from": {"$ref": "#/$defs/dependencyList"}
+      },
+      "additionalProperties": true
+    },
+    "current": {
+      "type": "object",
+      "required": ["baseline", "initiative"],
+      "properties": {
+        "baseline": {"type": "string", "minLength": 1},
+        "initiative": {"type": "string", "minLength": 1},
+        "roadmap": {"type": "string"},
+        "status_document": {"type": "string"},
+        "architecture_document": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "reference": {
+      "type": "object",
+      "required": ["type", "purpose"],
+      "properties": {
+        "type": {
+          "enum": ["greenfield", "brownfield-source", "brownfield-target"]
+        },
+        "purpose": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "publication": {
+      "type": "object",
+      "properties": {
+        "include": {"type": "array", "items": {"type": "string"}},
+        "authority": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "dependencyList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["repository", "capability"],
+        "properties": {
+          "repository": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+          "capability": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

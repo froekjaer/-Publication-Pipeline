@@ -1,0 +1,34 @@
+schema_version: 1
+programme:
+  id: collaborative-intelligence
+  name: Collaborative Intelligence
+repository:
+  full_name: froekjaer/-Publication-Pipeline
+  role: publication-and-programme-intelligence
+  lifecycle: foundation
+  status: active
+  version: "1.0"
+  default_branch: main
+purpose:
+  summary: Generate reproducible publications and Programme 360 views from reviewed sources.
+ownership:
+  owns:
+    - publication-manifests
+    - publication-build-provenance
+    - programme-360-generation
+  does_not_own:
+    - canonical-mission-semantics
+    - mission-specific-evidence
+dependencies:
+  consumes_from:
+    - repository: froekjaer/collaborative-intelligence
+      capability: programme architecture
+    - repository: froekjaer/mission-framework
+      capability: canonical semantics
+  provides_to:
+    - repository: froekjaer/collaborative-intelligence
+      capability: generated programme views
+current:
+  baseline: Foundation Release v1.0 / Documentation Generator 0.1
+  initiative: Programme 360 generator prototype
+  architecture_document: docs/programme-360.md

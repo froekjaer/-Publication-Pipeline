@@ -1,0 +1,51 @@
+schema_version: 1
+programme:
+  id: collaborative-intelligence
+  name: Collaborative Intelligence
+repository:
+  full_name: froekjaer/timelapse-pro
+  role: brownfield-source
+  lifecycle: lab-pre-production
+  status: read-only-for-review-001
+  version: frozen-baseline-eed9e3c8
+  default_branch: main
+  declaration_mode: external-pinned-record
+purpose:
+  summary: >-
+    Preserve the existing TimeLapse Pro system, documentation, code, tests, decisions and
+    operational evidence as the brownfield source for REVIEW-001 transformation work.
+ownership:
+  owns:
+    - timelapse-pro-current-system
+    - brownfield-operational-evidence
+    - brownfield-source-decisions
+    - migration-input
+  does_not_own:
+    - canonical-mission-semantics
+    - mission-platform-target-architecture
+    - programme-publication-rules
+dependencies:
+  consumes_from:
+    - repository: froekjaer/mission-framework
+      capability: review governance and semantic interpretation
+  provides_to:
+    - repository: froekjaer/Mission-Platform
+      capability: pinned source evidence and migration input
+    - repository: froekjaer/-Publication-Pipeline
+      capability: brownfield status and provenance input
+current:
+  baseline: eed9e3c8c67369e1924c25a11908616220c3c753
+  initiative: REVIEW-001 read-only brownfield source
+  status_document: Dokumentation/00_START_HER.md
+reference:
+  type: brownfield-source
+  purpose: >-
+    Test whether valuable behaviour, evidence and operational knowledge can be understood,
+    preserved and transformed into a modular target without modifying the source baseline.
+publication:
+  include:
+    - README.md
+    - Dokumentation/00_START_HER.md
+  authority: >-
+    This external record is a Programme 360 declaration pinned to the REVIEW-001 baseline;
+    TimeLapse Pro remains the authority for its own source and operating evidence.

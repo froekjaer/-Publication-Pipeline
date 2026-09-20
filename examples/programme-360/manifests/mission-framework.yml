@@ -1,0 +1,32 @@
+schema_version: 1
+programme:
+  id: collaborative-intelligence
+  name: Collaborative Intelligence
+repository:
+  full_name: froekjaer/mission-framework
+  role: canonical-framework
+  lifecycle: foundation
+  status: active
+  version: "1.0"
+purpose:
+  summary: Canonical mission semantics, trust, evidence and governance.
+ownership:
+  owns:
+    - canonical-mission-semantics
+    - mission-loop
+    - evidence-semantics
+    - governance-semantics
+dependencies:
+  consumes_from:
+    - repository: froekjaer/collaborative-intelligence
+      capability: programme-context
+    - repository: froekjaer/mission-solar-eclipse
+      capability: framework-findings
+current:
+  baseline: Foundation Release v1.0
+  initiative: Empirical validation and REVIEW-001
+publication:
+  include:
+    - README.md
+    - GLOSSARY.md
+  authority: canonical

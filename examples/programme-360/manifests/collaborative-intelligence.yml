@@ -1,0 +1,30 @@
+schema_version: 1
+programme:
+  id: collaborative-intelligence
+  name: Collaborative Intelligence
+repository:
+  full_name: froekjaer/collaborative-intelligence
+  role: programme-governance
+  lifecycle: foundation
+  status: active
+  version: "1.0"
+purpose:
+  summary: Programme vision, architecture and research method.
+ownership:
+  owns:
+    - programme-vision
+    - programme-architecture
+dependencies:
+  provides_to:
+    - repository: froekjaer/mission-framework
+      capability: programme-context
+  consumes_from:
+    - repository: froekjaer/mission-solar-eclipse
+      capability: greenfield-evidence
+current:
+  baseline: Foundation Release v1.0
+  initiative: Programme 360
+publication:
+  include:
+    - README.md
+  authority: programme
