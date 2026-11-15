@@ -1,0 +1,44 @@
+schema_version: 1
+publication_id: mf-ci-integrated-system-presentation-2026-11
+title: Mission Framework and Collaborative Intelligence
+subtitle: An evidence-governed system for human-AI collaboration
+status: publication-prototype
+language: en
+audiences:
+  - research
+  - executive
+  - engineering
+output_profile: presentation
+slide_count: 18
+source_date_epoch: 1794672000
+sources:
+  - repository: froekjaer/mission-framework
+    ref: main
+    commit: 9a1a45435ed0781f987760b00722d4a7700d5052
+    authority: canonical-semantics-and-governance
+  - repository: froekjaer/collaborative-intelligence
+    ref: main
+    commit: fab97b53598a6e2e0e22895e33f379ee24e7d225
+    authority: programme-research-posture
+  - repository: froekjaer/collaborative-intelligence
+    ref: research/collaborative-intelligence-v2-foundations
+    commit: 84b51789a060007d86ed8443f7c02887cdde6632
+    authority: draft-research-candidate-not-canonical
+  - repository: froekjaer/-Publication-Pipeline
+    ref: main
+    commit: fa07f26b9796a49aa8487881a8411e521fe9f3a2
+    authority: publication-transformation
+maintained_inputs:
+  - slides.md
+  - references.yml
+  - evidence-register.csv
+  - presentation.yml
+derived_outputs:
+  - live editable presentation artifact
+  - preview/montage.png
+disclosures:
+  - The integrated architecture is a synthesis and research proposition, not a validated causal model.
+  - Collaborative Intelligence v2 material comes from an open draft pull request and remains unmerged.
+  - The literature search is targeted, not systematic.
+  - The stable Publication Pipeline does not yet provide a presentation builder.
+  - Native PPTX download is delivered through the live presentation viewer rather than committed as an opaque binary.
