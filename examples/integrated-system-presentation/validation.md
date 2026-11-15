@@ -32,9 +32,16 @@
 - No unintended overlap or clipping was observed in the final review renders.
 - Native shapes preserve editability of architecture and process diagrams.
 
+## PowerPoint delivery check
+
+- Generated `dist/mission-framework-collaborative-intelligence.pptx` with 18 slides.
+- Verified that the package contains 18 speaker-note parts.
+- Re-imported the exported file with the first-party presentation library.
+- Opened and converted the file to PDF with LibreOffice in headless mode.
+
 ## Known limitations
 
 - The literature search is targeted, not systematic.
 - Some literature claims rely on abstracts or bibliographic metadata, as recorded in `references.yml`.
-- The stable repository has no supported PowerPoint builder. The editable deck is delivered through the live presentation artifact, while Git stores the reviewable source package and preview.
+- The stable generator has no PowerPoint profile. This package therefore keeps its presentation builder isolated inside the example package.
 - Rendering and visual inspection do not prove perfect behaviour in every PowerPoint or Google Slides version.

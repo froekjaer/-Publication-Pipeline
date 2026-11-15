@@ -10,9 +10,10 @@ This package turns reviewed repository material and a bounded academic source se
 - `slides.md` is the maintained slide and speaker-note source.
 - `references.yml` records bibliographic identity, source type, verification state and relevance.
 - `evidence-register.csv` maps presentation claims to evidence grades and counterarguments.
+- `build-presentation.mjs` produces the downloadable editable PowerPoint.
 - `BUILD.md` records the reproducible authoring and validation procedure.
 - `preview/montage.png` is a review preview of the 18-slide deck.
-- The editable PowerPoint is delivered as the live presentation artifact associated with this package and can be downloaded as `.pptx` from the presentation viewer.
+- `dist/mission-framework-collaborative-intelligence.pptx` is the downloadable editable PowerPoint.
 
 ## Evidence labels
 
@@ -26,7 +27,7 @@ The grade identifies the type and maturity of support for the claim in this pres
 
 ## Rebuild
 
-The current prototype is generated with the Codex presentation runtime because the stable Publication Pipeline does not yet implement a presentation builder. All maintained content inputs, layout rules and the validation receipt are included so the editorial transformation can be reviewed and repeated in that runtime. See `BUILD.md`.
+The current prototype is generated with the bundled Codex presentation runtime because the stable Publication Pipeline does not yet implement a presentation builder. All maintained content inputs, layout rules and the validation receipt are included so the editorial transformation can be reviewed and repeated. See `BUILD.md`.
 
 A future supported presentation builder should consume the same maintained inputs or migrate them through an explicit transformation contract. Generated files do not become semantic authority.
 

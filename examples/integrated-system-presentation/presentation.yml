@@ -34,7 +34,7 @@ maintained_inputs:
   - evidence-register.csv
   - presentation.yml
 derived_outputs:
-  - live editable presentation artifact
+  - dist/mission-framework-collaborative-intelligence.pptx
   - preview/montage.png
 disclosures:
   - The integrated architecture is a synthesis and research proposition, not a validated causal model.
