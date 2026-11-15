@@ -11,9 +11,12 @@ This package turns reviewed repository material and a bounded academic source se
 - `references.yml` records bibliographic identity, source type, verification state and relevance.
 - `evidence-register.csv` maps presentation claims to evidence grades and counterarguments.
 - `build-presentation.mjs` produces the downloadable editable PowerPoint.
+- `build-visual-edition.mjs` produces the recommended visual edition with editorial images and native diagrams.
 - `BUILD.md` records the reproducible authoring and validation procedure.
 - `preview/montage.png` is a review preview of the 18-slide deck.
 - `dist/mission-framework-collaborative-intelligence.pptx` is the downloadable editable PowerPoint.
+- `dist/mission-framework-collaborative-intelligence-visual-edition.pptx` is the recommended presentation for delivery.
+- `assets/` contains the three presentation-specific editorial images used by the visual edition.
 
 ## Evidence labels
 

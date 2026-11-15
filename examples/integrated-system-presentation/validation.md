@@ -39,6 +39,13 @@
 - Re-imported the exported file with the first-party presentation library.
 - Opened and converted the file to PDF with LibreOffice in headless mode.
 
+## Visual edition
+
+- Added a separate 18-slide visual edition with three presentation-specific editorial images.
+- Replaced long text pages with a thesis slide, authority map, architecture loop, evidence taxonomy, comparative evidence graphic, oversight comparison and staged research path.
+- Kept diagrams and quantitative evidence as native editable slide objects.
+- Rendered and inspected all slides, including the six visually distinct anchor slides at full size.
+
 ## Known limitations
 
 - The literature search is targeted, not systematic.
