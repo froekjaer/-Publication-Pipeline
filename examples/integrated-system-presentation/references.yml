@@ -1,0 +1,106 @@
+references:
+  - id: mission-architecture
+    citation: Mission Framework. Mission Framework Architecture. 2026.
+    url: https://github.com/froekjaer/mission-framework/blob/9a1a45435ed0781f987760b00722d4a7700d5052/docs/ARCHITECTURE.md
+    type: canonical-repository-source
+    verification: read-at-pinned-commit
+  - id: mission-evidence
+    citation: Mission Framework. Evidence Model. 2026.
+    url: https://github.com/froekjaer/mission-framework/blob/9a1a45435ed0781f987760b00722d4a7700d5052/docs/EVIDENCE_MODEL.md
+    type: canonical-repository-source
+    verification: read-at-pinned-commit
+  - id: mission-op001
+    citation: Mission Framework. OP-001 Mission Operational Preamble. 2026.
+    url: https://github.com/froekjaer/mission-framework/blob/9a1a45435ed0781f987760b00722d4a7700d5052/docs/operational/OP-001-Mission-Operational-Preamble.md
+    type: canonical-repository-source
+    verification: read-at-pinned-commit
+  - id: ci-main
+    citation: Collaborative Intelligence. Foundation Release v1.0 programme overview. 2026.
+    url: https://github.com/froekjaer/collaborative-intelligence/blob/fab97b53598a6e2e0e22895e33f379ee24e7d225/README.md
+    type: programme-source
+    verification: read-at-pinned-commit
+  - id: ci-v2
+    citation: Collaborative Intelligence. v2 research foundations. Draft PR 14. 2026.
+    url: https://github.com/froekjaer/collaborative-intelligence/blob/84b51789a060007d86ed8443f7c02887cdde6632/research/COLLABORATIVE_INTELLIGENCE_V2_FOUNDATIONS.md
+    type: unmerged-research-proposal
+    verification: read-at-pinned-commit
+  - id: ci-v2-review
+    citation: Claude. Independent critical review, Collaborative Intelligence v2 foundations. 2026.
+    url: https://github.com/froekjaer/collaborative-intelligence/blob/84b51789a060007d86ed8443f7c02887cdde6632/research/reviews/CLAUDE_INDEPENDENT_CRITICAL_REVIEW_V2_2026-11.md
+    type: advisory-ai-review
+    verification: read-at-pinned-commit
+  - id: pipeline
+    citation: Publication Pipeline. Foundation v1.1. 2026.
+    url: https://github.com/froekjaer/-Publication-Pipeline/blob/fa07f26b9796a49aa8487881a8411e521fe9f3a2/README.md
+    type: publication-architecture
+    verification: read-at-pinned-commit
+  - id: vaccaro2024
+    citation: Vaccaro, M., Almaatouq, A., and Malone, T. W. When combinations of humans and AI are useful. Nature Human Behaviour, 2024.
+    doi: 10.1038/s41562-024-02024-1
+    url: https://doi.org/10.1038/s41562-024-02024-1
+    type: preregistered-systematic-review-and-meta-analysis
+    verification: publisher-metadata-and-abstract
+  - id: bastani2025
+    citation: Bastani, H. et al. Generative AI without guardrails can harm learning. Proceedings of the National Academy of Sciences, 2025.
+    doi: 10.1073/pnas.2422633122
+    url: https://doi.org/10.1073/pnas.2422633122
+    type: field-experiment
+    verification: publisher-metadata-and-abstract
+  - id: goddard2012
+    citation: Goddard, K., Roudsari, A., and Wyatt, J. C. Automation bias, a systematic review. Journal of the American Medical Informatics Association, 2012.
+    doi: 10.1136/amiajnl-2011-000089
+    url: https://doi.org/10.1136/amiajnl-2011-000089
+    type: systematic-review
+    verification: publisher-metadata-and-abstract
+  - id: green2022
+    citation: Green, B. The flaws of policies requiring human oversight of government algorithms. Computer Law and Security Review, 2022.
+    doi: 10.1016/j.clsr.2022.105681
+    url: https://doi.org/10.1016/j.clsr.2022.105681
+    type: policy-analysis
+    verification: publisher-metadata-and-abstract
+  - id: gupta2023
+    citation: Gupta, P., Nguyen, T. N., Gonzalez, C., and Woolley, A. W. Fostering Collective Intelligence in Human-AI Collaboration. Topics in Cognitive Science, online 2023, issue 2025.
+    doi: 10.1111/tops.12679
+    url: https://doi.org/10.1111/tops.12679
+    type: peer-reviewed-conceptual-research-agenda
+    verification: full-text-open-access
+  - id: zheng2026
+    citation: Zheng, Z., Pan, L., and Lan, X. Designing Human-AI Collaborative Science, The 9A Framework. arXiv, 2026.
+    url: https://arxiv.org/abs/2610.22948
+    type: preprint-conceptual-framework
+    verification: abstract-and-metadata
+  - id: vishwarupe2026
+    citation: Vishwarupe, V., Jirotka, M., Shadbolt, N., and Flechais, I. The Collaboration Gap in Human-AI Work. arXiv, 2026.
+    url: https://arxiv.org/abs/2604.18096
+    type: qualitative-interview-study-and-conceptual-framework
+    verification: abstract-and-available-text
+  - id: quinones2026
+    citation: Quinones-Gomez, J. C. Hybrid Human-AI Co-Creation in Design. CERN IdeaSquare Journal of Experimental Innovation, 2026.
+    doi: 10.23726/cij.2026.1857
+    url: https://doi.org/10.23726/cij.2026.1857
+    type: exploratory-mixed-method-study
+    verification: open-access-full-text
+  - id: vandijk2012
+    citation: van Dijk, H., van Engen, M. L., and van Knippenberg, D. Defying conventional wisdom. Organizational Behavior and Human Decision Processes, 2012.
+    doi: 10.1016/j.obhdp.2012.06.003
+    url: https://doi.org/10.1016/j.obhdp.2012.06.003
+    type: meta-analysis
+    verification: bibliographic-metadata
+  - id: lu2012
+    citation: Lu, L., Yuan, Y. C., and McLeod, P. L. Twenty-five years of hidden profiles in group decision making. Personality and Social Psychology Review, 2012.
+    doi: 10.1177/1088868311417243
+    url: https://doi.org/10.1177/1088868311417243
+    type: meta-analysis
+    verification: publisher-metadata-and-abstract
+  - id: nemeth2001
+    citation: Nemeth, C. et al. Devil's advocate versus authentic dissent. European Journal of Social Psychology, 2001.
+    doi: 10.1002/ejsp.58
+    url: https://doi.org/10.1002/ejsp.58
+    type: experimental-study
+    verification: bibliographic-metadata
+  - id: elish2019
+    citation: Elish, M. C. Moral crumple zones. Engaging Science, Technology, and Society, 2019.
+    doi: 10.17351/ests2019.260
+    url: https://doi.org/10.17351/ests2019.260
+    type: conceptual-and-case-analysis
+    verification: bibliographic-metadata
