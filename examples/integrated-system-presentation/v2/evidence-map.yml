@@ -1,0 +1,185 @@
+version: 2
+status: review-candidate
+purpose: >-
+  Separate academic findings, programme synthesis and normative choices before
+  using research to inform the integrated Mission Framework and Collaborative
+  Intelligence system.
+epistemic_layers:
+  finding:
+    en: What the source directly studied and reported
+    da: Hvad kilden direkte undersøgte og rapporterede
+  synthesis:
+    en: Our bounded interpretation across sources
+    da: Vores afgrænsede fortolkning på tværs af kilder
+  choice:
+    en: A value or design decision requiring accountable human authority
+    da: Et værdi- eller designvalg som kræver ansvarlig menneskelig beslutning
+records:
+  - id: E01
+    source: Vaccaro et al. 2024
+    locator: https://doi.org/10.1038/s41562-024-02024-1
+    method: Preregistered systematic review and meta-analysis of 106 experiments
+    method_da: Præregistreret systematisk review og meta-analyse af 106 eksperimenter
+    finding_en: Human and AI combinations performed worse on average than the better of humans or AI alone. Effects varied materially by task type and relative capability.
+    finding_da: Kombinationer af mennesker og AI klarede sig i gennemsnit dårligere end den bedste af mennesket eller AI alene. Effekten varierede væsentligt med opgavetype og relative kapabiliteter.
+    limits_en: The included studies were published from 2020 to mid-2023 and largely predate current frontier models. Average effects do not describe every task.
+    limits_da: De inkluderede studier blev publiceret fra 2020 til midten af 2023 og ligger hovedsageligt før de nuværende frontier-modeller. Gennemsnitseffekten beskriver ikke enhver opgave.
+    relevance_en: Establishes a strong comparative baseline and argues for task-specific evaluation.
+    relevance_da: Etablerer en stærk sammenligningsbaseline og taler for opgavespecifik evaluering.
+    does_not_imply_en: Human-AI collaboration is generally harmful or cannot outperform alternatives.
+    does_not_imply_da: At menneske-AI-samarbejde generelt er skadeligt eller aldrig kan overgå alternativer.
+    grade: A
+  - id: E02
+    source: Bastani et al. 2025
+    locator: https://doi.org/10.1073/pnas.2422633122
+    method: Field experiment with nearly 1000 secondary-school students
+    method_da: Felteksperiment med næsten 1.000 elever på sekundærtrinnet
+    finding_en: Unrestricted GPT-4 access improved practice performance but reduced later unaided performance. A guardrailed tutor reduced the negative effect.
+    finding_da: Ubegrænset adgang til GPT-4 forbedrede præstationen under træning, men reducerede den senere præstation uden hjælp. En tutor med værn reducerede den negative effekt.
+    limits_en: One educational population and subject area. It does not estimate general workplace deskilling.
+    limits_da: Én uddannelsespopulation og ét fagområde. Studiet estimerer ikke generel deskilling på arbejdspladser.
+    relevance_en: Supports measuring both assisted performance and retained competence.
+    relevance_da: Understøtter måling af både assisteret præstation og bevaret kompetence.
+    does_not_imply_en: Assistance is illegitimate or that unaided performance is always the right success measure.
+    does_not_imply_da: At hjælp er illegitim, eller at præstation uden hjælp altid er det rigtige succeskriterium.
+    grade: B
+  - id: E03
+    source: Goddard et al. 2012
+    locator: https://doi.org/10.1136/amiajnl-2011-000089
+    method: Systematic review of 74 studies on automation bias
+    method_da: Systematisk review af 74 studier om automatiseringsbias
+    finding_en: Reliance errors are influenced by workload, complexity, time pressure, trust and experience. Training, accountability and display design can mitigate them.
+    finding_da: Fejl i afhængighed af automatisering påvirkes af arbejdsbelastning, kompleksitet, tidspres, tillid og erfaring. Træning, ansvarlighed og design af visningen kan reducere dem.
+    limits_en: Much of the evidence predates generative AI and comes from professional decision-support settings.
+    limits_da: En stor del af evidensen ligger før generativ AI og kommer fra professionelle beslutningsstøttemiljøer.
+    relevance_en: Shows that oversight quality depends on operating conditions rather than the mere presence of a human.
+    relevance_da: Viser at kvaliteten af tilsyn afhænger af arbejdsbetingelser og ikke blot af, at et menneske er til stede.
+    does_not_imply_en: Human oversight is uniformly ineffective.
+    does_not_imply_da: At menneskeligt tilsyn altid er ineffektivt.
+    grade: A
+  - id: E04
+    source: Green 2022
+    locator: https://doi.org/10.1016/j.clsr.2022.105681
+    method: Analysis of 41 policies requiring human oversight of government algorithms
+    method_da: Analyse af 41 politikker med krav om menneskeligt tilsyn med offentlige algoritmer
+    finding_en: Human-oversight requirements can create false assurance when people cannot perform the expected oversight function.
+    finding_da: Krav om menneskeligt tilsyn kan skabe falsk tryghed, når mennesker ikke kan udføre den forventede kontrolfunktion.
+    limits_en: Policy analysis rather than a controlled performance study. Government contexts do not cover every organisation.
+    limits_da: Politikanalyse frem for et kontrolleret præstationsstudie. Offentlige kontekster dækker ikke enhver organisation.
+    relevance_en: Requires authority, competence, time and independent evidence to be designed into oversight.
+    relevance_da: Kræver at myndighed, kompetence, tid og uafhængig evidens designes ind i tilsynet.
+    does_not_imply_en: Consequential decisions should be delegated to AI instead.
+    does_not_imply_da: At konsekvensfulde beslutninger i stedet bør delegeres til AI.
+    grade: C
+  - id: E05
+    source: Gupta et al. 2023 and 2025 issue
+    locator: https://doi.org/10.1111/tops.12679
+    method: Peer-reviewed conceptual research agenda and sociocognitive architecture
+    method_da: Peer-reviewet begrebslig forskningsdagsorden og sociokognitiv arkitektur
+    finding_en: Proposes that collective human-machine intelligence requires coordination of distributed memory, attention and reasoning and shared understanding of cognitive resources and states.
+    finding_da: Foreslår at kollektiv menneske-maskine-intelligens kræver koordinering af distribueret hukommelse, opmærksomhed og ræsonnement samt fælles forståelse af kognitive ressourcer og tilstande.
+    limits_en: A research architecture, not empirical proof that the proposed system produces collective intelligence.
+    limits_da: En forskningsarkitektur og ikke empirisk bevis for at det foreslåede system skaber kollektiv intelligens.
+    relevance_en: Provides mechanisms for analysing coordination beyond individual model capability.
+    relevance_da: Tilbyder mekanismer til at analysere koordinering ud over den enkelte models kapabilitet.
+    does_not_imply_en: Mission Framework or the integrated system has been validated.
+    does_not_imply_da: At Mission Framework eller det integrerede system er valideret.
+    grade: C
+  - id: E06
+    source: Vishwarupe et al. 2026
+    locator: https://arxiv.org/abs/2604.18096
+    method: Constructivist grounded-theory study based on 16 practitioner interviews
+    method_da: Konstruktivistisk grounded-theory-studie baseret på 16 interviews med praktikere
+    finding_en: Proposes that stable collaboration depends on grounding capacity and how repair work is distributed. Iteration alone can still leave repair almost entirely with the human.
+    finding_da: Foreslår at stabilt samarbejde afhænger af fælles grounding og af fordelingen af reparationsarbejdet. Iteration alene kan stadig efterlade næsten hele reparationsbyrden hos mennesket.
+    limits_en: Small qualitative sample. It supports theory building, not prevalence or causal estimates.
+    limits_da: Lille kvalitativ stikprøve. Studiet understøtter teoriudvikling, ikke estimater af udbredelse eller årsag.
+    relevance_en: Supports explicit shared state, assumption signalling and repair mechanisms.
+    relevance_da: Understøtter eksplicit fælles tilstand, synliggørelse af antagelser og reparationsmekanismer.
+    does_not_imply_en: Every iterative AI interaction is genuine collaboration.
+    does_not_imply_da: At enhver iterativ AI-interaktion er egentligt samarbejde.
+    grade: C
+  - id: E07
+    source: Zheng et al. 2026
+    locator: https://arxiv.org/abs/2610.22948
+    method: Conceptual synthesis for human-AI collaborative science
+    method_da: Begrebslig syntese for menneske–AI-samarbejde i videnskab
+    finding_en: Organises collaborative-system design around activity, actor, authority, awareness, accountability, adaptability, achievement, attribution and assurance.
+    finding_da: Organiserer design af samarbejdssystemer omkring aktivitet, aktør, autoritet, awareness, ansvarlighed, tilpasning, resultat, attribution og assurance.
+    limits_en: Preprint and conceptual framework without empirical validation of its relationships.
+    limits_da: Preprint og begrebsligt rammeværk uden empirisk validering af relationerne.
+    relevance_en: Provides a checklist for separating work allocation, authority, coordination and evaluation.
+    relevance_da: Giver en tjekliste til at adskille arbejdsfordeling, autoritet, koordinering og evaluering.
+    does_not_imply_en: Nine dimensions are necessary or sufficient in every domain.
+    does_not_imply_da: At de ni dimensioner er nødvendige eller tilstrækkelige i ethvert domæne.
+    grade: C
+  - id: E08
+    source: Quinones-Gomez 2026
+    locator: https://doi.org/10.23726/cij.2026.1857
+    method: Model-building synthesis of 13 publications and questionnaire with 16 design professionals
+    method_da: Modelbyggende syntese af 13 publikationer og spørgeskema med 16 designprofessionelle
+    finding_en: Distinguishes co-creation from bounded computational support through negotiated roles, initiative, authorship and responsibility.
+    finding_da: Adskiller samskabelse fra afgrænset computerstøtte gennem forhandlede roller, initiativ, forfatterskab og ansvar.
+    limits_en: Small exploratory sample in design practice. General effects are not established.
+    limits_da: Lille eksplorativ stikprøve i designpraksis. Generelle effekter er ikke etableret.
+    relevance_en: Prevents AI participation from automatically being described as collaboration or co-creation.
+    relevance_da: Forhindrer at AI-deltagelse automatisk beskrives som samarbejde eller samskabelse.
+    does_not_imply_en: AI has moral agency or independent accountability.
+    does_not_imply_da: At AI har moralsk agens eller selvstændigt ansvar.
+    grade: C
+  - id: E09
+    source: van Dijk et al. 2012
+    locator: https://doi.org/10.1016/j.obhdp.2012.06.003
+    method: Meta-analysis of demographic and job-related diversity and team performance
+    method_da: Meta-analyse af demografisk og jobrelateret diversitet og teampræstation
+    finding_en: Demographic diversity has a near-zero average relationship with performance. Job-related diversity has a small positive relationship under some conditions.
+    finding_da: Demografisk diversitet har i gennemsnit en relation tæt på nul til præstation. Jobrelateret diversitet har under nogle betingelser en lille positiv relation.
+    limits_en: Average team-performance effects do not settle questions of justice, representation or epistemic inclusion.
+    limits_da: Gennemsnitlige effekter på teampræstation afgør ikke spørgsmål om retfærdighed, repræsentation eller epistemisk inklusion.
+    relevance_en: Separates the justice case for inclusion from empirical performance claims.
+    relevance_da: Adskiller det retfærdighedsbaserede argument for inklusion fra empiriske præstationspåstande.
+    does_not_imply_en: Diversity is irrelevant or should be avoided.
+    does_not_imply_da: At diversitet er irrelevant eller bør undgås.
+    grade: A
+  - id: E10
+    source: Lu et al. 2012
+    locator: https://doi.org/10.1177/1088868311417243
+    method: Meta-analysis of 65 hidden-profile studies with 3189 groups
+    method_da: Meta-analyse af 65 hidden-profile-studier med 3.189 grupper
+    finding_en: Groups often fail to integrate distributed information and are substantially less likely to identify the correct solution than fully informed groups.
+    finding_da: Grupper formår ofte ikke at integrere distribueret information og har væsentligt lavere sandsynlighed for at finde den rigtige løsning end fuldt informerede grupper.
+    limits_en: Experimental hidden-profile tasks simplify real organisations and do not model every form of expertise.
+    limits_da: Eksperimentelle hidden-profile-opgaver forenkler virkelige organisationer og modellerer ikke enhver form for ekspertise.
+    relevance_en: Supports mechanisms that surface unshared information and dissent before decisions.
+    relevance_da: Understøtter mekanismer der synliggør ikke-delt information og uenighed før beslutninger.
+    does_not_imply_en: More discussion or more participants automatically solve information-sharing failures.
+    does_not_imply_da: At mere diskussion eller flere deltagere automatisk løser problemer med informationsdeling.
+    grade: A
+  - id: E11
+    source: Nemeth et al. 2001
+    locator: https://doi.org/10.1002/ejsp.58
+    method: Experimental comparison of authentic dissent and assigned devil advocacy
+    method_da: Eksperimentel sammenligning af autentisk uenighed og tildelt djævlens advokat-rolle
+    finding_en: Authentic dissent can stimulate more original thought than role-assigned devil advocacy.
+    finding_da: Autentisk uenighed kan stimulere mere original tænkning end en tildelt djævlens advokat-rolle.
+    limits_en: Experimental tasks and group settings. Effects depend on how dissent is expressed and received.
+    limits_da: Eksperimentelle opgaver og gruppesituationer. Effekten afhænger af hvordan uenighed udtrykkes og modtages.
+    relevance_en: Supports preserving genuine alternative perspectives rather than simulating opposition as a ritual.
+    relevance_da: Understøtter bevarelse af reelle alternative perspektiver frem for rituel simulering af modstand.
+    does_not_imply_en: Conflict is always useful or that any dissent improves decisions.
+    does_not_imply_da: At konflikt altid er nyttig, eller at enhver uenighed forbedrer beslutninger.
+    grade: B
+  - id: E12
+    source: Mission Framework repositories
+    locator: https://github.com/froekjaer/mission-framework/tree/9a1a45435ed0781f987760b00722d4a7700d5052
+    method: Programme architecture and normative governance proposal
+    method_da: Programarkitektur og normativt styringsforslag
+    finding_en: Defines a reviewable chain from reality through observation, evidence, knowledge, decision, action, outcome and learning with provenance and accountable authority.
+    finding_da: Definerer en reviewbar kæde fra virkelighed gennem observation, evidens, viden, beslutning, handling, resultat og læring med proveniens og ansvarlig autoritet.
+    limits_en: Repository coherence is inspectable, but the architecture has not been validated as a whole through comparative outcome studies.
+    limits_da: Repositoryets sammenhæng kan inspiceres, men arkitekturen er ikke valideret som helhed gennem sammenlignende effektstudier.
+    relevance_en: Supplies the proposed semantic and governance spine for the integrated system.
+    relevance_da: Leverer den foreslåede semantiske og styringsmæssige rygrad for det integrerede system.
+    does_not_imply_en: The architecture is an established academic theory or proven product.
+    does_not_imply_da: At arkitekturen er en etableret akademisk teori eller et dokumenteret produkt.
+    grade: P
